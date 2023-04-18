@@ -1,3 +1,7 @@
+import {
+  body
+} from './elements.js'
+
 const {pathname} = window.location
 
 switch (pathname) {

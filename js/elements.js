@@ -8,5 +8,5 @@ export {
   home, 
   universe ,
   explorer ,
-  ImagesBG  
+  ImagesBG ,
 }

@@ -1,15 +1,15 @@
 import {
   home, 
-  universe,
-  explorer,
-  ImagesBG  
+  universe ,
+  explorer ,
+  ImagesBG , 
 } from './elements.js'
 
 let {pathname} = window.location
 
 let bg_img= 'url("./assets/mountains-universe-1.png")';
 
-export default function Bg(){
+export default function Style(){
 
   if(pathname == '/'){
     home()

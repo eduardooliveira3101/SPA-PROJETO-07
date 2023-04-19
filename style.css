@@ -12,7 +12,13 @@
 
 body {
   background-image: var(--bg-img);
+
+  background-repeat: no-repeat;
   background-size: cover;
+
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
 }
 
 .set_navigations {

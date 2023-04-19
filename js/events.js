@@ -2,22 +2,22 @@ import {
   home, 
   universe ,
   explorer ,
-  ImagesBG 
+  ImagesBG ,
 } from './elements.js'
 
-import Bg from './bg.js'
+import Style from './bg.js'
 
 export default function() {
   home.addEventListener('click', function() {
-    Bg()
+    Style()
   })
   
   universe.addEventListener('click', function() {
-    Bg()
+    Style()
   })
 
   explorer.addEventListener('click', function() {
-    Bg()
+    Style()
   })
 
 

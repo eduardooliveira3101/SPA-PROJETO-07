@@ -1,45 +1,50 @@
 import {
-  body
+  home, 
+  universe,
+  explorer,
+  ImagesBG  
 } from './elements.js'
 
-const {pathname} = window.location
+let {pathname} = window.location
 
-switch (pathname) {
-  case '/':
-    bgHome()
+let bg_img= 'url("./assets/mountains-universe-1.png")';
 
-    break;
+export default function Bg(){
 
-    case '/universe':
-      bgUniverse()
+  if(pathname == '/'){
+    home()
+  }
 
-      break;
+  if(pathname == '/universe'){
+    universe()
+  }
 
-      case '/explorer':
-        bgExplorer()
-
-  default:
-    break;
+  if(pathname == '/explorer'){
+    explorer()
 }
 
-function bgHome() {
-  body.classList.add('home')
-  body.classList.remove('universe')
-  body.classList.remove('explorer')
+  function home(){
+
+    bg_img= 'url("./assets/mountains-universe-1.png")'
+    ImagesBG.style.setProperty('--bg-img', bg_img);
+  }
+
+  function universe(){
+    bg_img= 'url("./assets/mountains-universe02.png")'
+
+    ImagesBG.style.setProperty('--bg-img', bg_img);
+  }
+
+  function explorer(){
+    bg_img= 'url("./assets/mountains-universe-3.png")'
+
+    ImagesBG.style.setProperty('--bg-img', bg_img);
+
+  }
+
+  return{
+    home,
+    universe,
+    explorer,
+  }
 }
-
-function bgUniverse() {
-  body.classList.remove('home')
-  body.classList.add('universe')
-  body.classList.remove('explorer')
-}
-
-function bgExplorer() {
-  body.classList.remove('home')
-  body.classList.remove('universe')
-  body.classList.add('explorer')
-}
-
-
-
-

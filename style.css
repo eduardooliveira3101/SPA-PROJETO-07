@@ -7,25 +7,11 @@
 
 :root {
   font-size: 62.5%;
-}
-
-.bg-universe {
-  background: url(./assets/mountains-universe02.png) no-repeat center center fixed;
-  background-size: cover;
-}
-
-.bg-explorer {
-  background: url(./assets/mountains-universe-3.png) no-repeat center center fixed;
-  background-size: cover;
-}
-
-.bg-home {
-  background: url(./assets/mountains-universe-1.png) no-repeat center center fixed;
-  background-size: cover;
+  --bg-img: url(./assets/mountains-universe-1.png);
 }
 
 body {
-  background: url(./assets/mountains-universe-1.png) no-repeat center center fixed;
+  background-image: var(--bg-img);
   background-size: cover;
 }
 

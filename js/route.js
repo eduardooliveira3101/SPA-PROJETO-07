@@ -7,8 +7,7 @@ export class Router {
   }
 
   route(event) {
-    event = event || window.event
-    event.preventDefault()
+    event = event.preventDefault()
 
     window.history.pushState({}, "", event.target.href)
 
@@ -25,7 +24,17 @@ export class Router {
       .then(html => {
         document.querySelector("#app").innerHTML = html
       })
+
+      if(pathname == '/') {
+        document.body.style.backgroundImage = "url('./assets/mountains-universe-1.png')";
+      } else if(pathname == '/universe') {
+        document.body.style.backgroundImage = "url('./assets/mountains-universe02.png')";
+      } else if(pathname == '/explorer') {
+        document.body.style.backgroundImage = "url('./assets/mountains-universe-3.png')";
+      }
   }
+
+  
   
 }
 
